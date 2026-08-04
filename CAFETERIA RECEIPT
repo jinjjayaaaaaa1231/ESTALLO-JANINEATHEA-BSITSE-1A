@@ -1,0 +1,44 @@
+while True:
+    print("=======CAFETERIA RECORD=======")
+    customer_name= input("Enter your name: ")
+    meal_number= int(input("How many meals did you order?: "))
+    
+    if meal_number >= 2:
+        price_permeal= float(input("Enter the price per meal: "))
+        
+     #arithmetic operations
+    total= meal_number * price_permeal
+    
+     #selection statement
+    if total >= 500:
+         discount= total * 0.10
+    else:
+        discount= 0.0
+        
+    final_price= total - discount
+    #relational and logical operators
+    if meal_number >=5 and total>=400:
+        promo_drink= "You ARE qulified for free drink!!!!"
+    else:
+        promo_drink= "You ARE NOT qulified for free drink!!!!"
+    
+    print("------Total Bill------")
+    print(f"Customer name:",customer_name)
+    print(f'Total of meals:',meal_number)
+    print(f'Subtotal: Php',total)
+    print(f'Discount: Php',discount)
+    print("-----------------------")
+    print(f'Total: Php',final_price)
+    print("-----------------------")
+    print(f"Promo Status:",promo_drink)
+    print("-----------------------")
+    #loop
+    again= input("Do you want another try?(Y/N): ")
+    if again== "N":
+        print("=========================")
+        print("Have a nice day!!!")
+        break
+    else:
+        print("===============================")
+   
+        
